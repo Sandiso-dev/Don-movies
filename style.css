@@ -1,0 +1,217 @@
+
+ ::-webkit-scrollbar {
+    width: 5px;
+    margin-left: -90px;
+    cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: white;
+    border-radius: 20px;
+    cursor: pointer;
+   
+}
+
+
+/*body style*/
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+   width: 100%;
+   height: 100vh;
+   background: rgb(83, 83, 83);
+   color: white;
+   display: flex;
+   align-items: center;  
+   justify-content: center; 
+   font-family: 'Poppins', sans-serif;
+   cursor: pointer;
+}
+
+/*NAVBAR*/
+
+.nav-container{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    
+    top: 0;
+    width: 100%;
+    height: 90px;
+    z-index: 9999;
+    border-radius: 8px;
+    background: rgba(27, 2, 2, 0.856);
+}
+
+.nav-container .search input{
+ height: 45px;
+ width: 250px;
+ background-color: lightgray;
+ color:black;
+ border: none;
+ margin-right: 40px;
+ border-radius: 14px;
+ font-size: 15px;
+}
+
+.search input::-webkit-input-placeholder{
+    color:rgb(107, 6, 6);
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.logo{
+    color: white;
+    font-size: 25px;
+}
+
+/*FRONT VIDEO*/
+
+.movie-title{
+    font-size: 30px;
+
+}
+.vid-icon{
+    color: rgb(107, 6, 6);
+    font-size: 30px;
+}
+
+.details{
+    position: relative;
+    top: 50%;
+    left: 5px;
+}
+.ratings{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.rate-icon{
+   color: red;
+   font-weight: 800;
+}
+.btn{
+    background-color:rgb(107, 6, 6);
+    width: 120px;
+    height: 40px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+
+}
+
+section{
+    position: relative;
+    left: 10%;
+    top: -2%;
+    width:68% ;
+    height: 65%;
+    border: 1px solid rgb(87, 11, 11);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 10px 25px -8px #000;
+}
+
+section::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('pictures/2.JPG') no-repeat center center/cover;
+    opacity: .9;
+    z-index: -1;
+}
+
+section::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #000);
+    z-index: -1;
+}
+
+section video{
+    position: absolute;
+    width: 122%;
+    height: 175%;
+    top: -50%;
+    z-index: -1;
+    
+}
+
+/*SIDEBAR*/
+
+.sidebar{
+    position: fixed;
+    top: 15%;
+    left: 0;
+    width: 260px;
+    height: 70%;
+    display: flex;
+}
+.movies{
+    position: relative;
+    margin: 17px;
+}
+.sidebar img{
+    width: 100px;
+}
+.movies-scroll{
+    overflow: auto;
+}
+
+/*POPULAR MOVIES*/
+
+.popular img{
+    width: 118px;
+    inline-size: 100%;
+    aspect-ratio: 10 / 19;
+    object-fit: cover;
+}
+
+.popular{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    bottom: -59%;
+    left: -33%;
+    align-items: center;
+    justify-content: center;
+
+}
+.popular-container{
+    position: absolute;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 12%;
+    overscroll-behavior-inline: contain;
+
+
+
+    overflow-x: auto;
+}
+
+@media screen and (max-width: 600px ){
+    section{
+        display: none;
+    }
+}
+@media screen and (max-width: 750px ){
+  section video{
+    display: none;
+  }
+ .sidebar{
+    height: 70%;
+ }
+ 
+}
+
