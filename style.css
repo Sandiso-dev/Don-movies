@@ -151,6 +151,7 @@ section video{
 /*SIDEBAR*/
 
 .sidebar{
+    display: block;
     position: fixed;
     top: 15%;
     left: 0;
@@ -210,8 +211,19 @@ section video{
     display: none;
   }
  .sidebar{
+    align-items: center;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: auto;
     height: 70%;
+    width: 100%;
  }
+
+ .sidebar img{
+    width: 400px;
+ }
+
+ 
  
 }
 
